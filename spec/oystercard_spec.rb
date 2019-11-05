@@ -12,4 +12,8 @@ describe Oystercard do
    expect(subject).to respond_to(:balance)
    end
 
+     it 'has a balance of zero' do
+       oyster_card = Oystercard.new
+     expect(subject.balance).to eq(0)
+    end
  end
