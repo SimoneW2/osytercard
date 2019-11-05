@@ -19,6 +19,6 @@ describe Oystercard do
 
     it 'it respond to top up method' do
       oyster_card = Oystercard.new
-    expect(subject).to respond_to(:top_up)
+    expect(subject).to respond_to(:top_up).with(1).argument
   end
  end
