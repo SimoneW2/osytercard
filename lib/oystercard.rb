@@ -14,5 +14,6 @@ MAXIMUM_BALANCE = 90 #gives the constant a value of 90
    end
 
    def deduct(amount)
+     @balance -= amount
    end
 end
