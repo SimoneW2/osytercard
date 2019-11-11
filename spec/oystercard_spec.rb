@@ -42,4 +42,14 @@ describe Oystercard do
      oyster_card = Oystercard.new
      expect{subject.deduct 1}.to change{subject.balance}.by -1
    end
+
+   it 'checks Oystercard class responds to touch_in method' do
+    oyster_card = Oystercard.new
+    expect(subject).to respond_to(:in_journey?)
+  end
+
+  it 'Detects if in_journey method is true' do
+    oyster_card = Oystercard.new
+    expect(oyster_card.in_journey?).to be true
+  end
 end

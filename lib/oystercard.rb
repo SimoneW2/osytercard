@@ -16,4 +16,19 @@ MAXIMUM_BALANCE = 90 #gives the constant a value of 90
    def deduct(amount)
      @balance -= amount
    end
+
+   def in_journey?
+     true
+   end
+   # def touch_in
+   #   @in_use = true
+   # end
+   #
+   # def in_journey?
+   #   @in_use
+   # end
+   #
+   # def touch_out
+   #   @in_use = false
+   # end
 end
