@@ -1,10 +1,12 @@
 class Oystercard
 attr_accessor :balance #This is equivalent to writting a balance method that is empty
 #This initializes a instance variable which we give zero as we want balance to equal zero
+attr_accessor :in_use
 
 MAXIMUM_BALANCE = 90 #gives the constant a value of 90
-  def initialize
-    @balance = 0
+  def initialize(balance = 0, in_use = false)
+    @balance = balance
+    @in_use = in_use
   end
 
    def top_up(amount)
@@ -18,17 +20,14 @@ MAXIMUM_BALANCE = 90 #gives the constant a value of 90
    end
 
    def in_journey?
-     true
+     @in_use = false
    end
-   # def touch_in
-   #   @in_use = true
-   # end
-   #
-   # def in_journey?
-   #   @in_use
-   # end
-   #
-   # def touch_out
-   #   @in_use = false
-   # end
+
+   def touch_in
+      @in_use = true
+    end
+
+    def touch_out
+     @in_use = false
+    end
 end
